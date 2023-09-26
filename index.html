@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+   <header> 
+    <h1> Weather Dashboard </h1>
+</header> 
+
+<section id = 'search'>
+    <label for="city-search"> Enter a city:</label>
+    <input type="text" id="city-search" placeholder="Search for a city...">
+    <button id="search-btn"> Search </button>
+</section>
+
+<section id="current-weather">
+<h2> Current Weather </h2>
+<div id="weather-details">
+    <p><strong>City:</strong><span id="current-city"></span></p>
+    <p><strong>City:</strong><span id="current-temp"></span></p>
+    <p><strong>City:</strong><span id="current-condition"></span></p>
+    <p><strong>City:</strong><span id="current-wind"></span></p>
+    <p><strong>City:</strong><span id="current-humidity"></span></p>
+</div>
+</section>
+
+<section id="forecast">
+    <h2>5 Day Forecast</h2>
+    <div class="forecast-details">
+        <div class="forecast-day">
+            <h3>Monday</h3>
+            <p><strong> Temperature:</strong> <span class="forecast-temp"> 25°C </span></p>
+            <p><strong> Condition:</strong> <span class="forecast-condition"> Sunny </span></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p> Weather provided by Weather Api</p>
+</footer>
+<script> </script>
+
+</body>
+</html>
