@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             console.error('Unable to fetch forecast.');
                         }
                     });
-                    
+                    addCityButtonListeners();
                     getCurrentWeather(cityName).then(data => {
                         if (data) {
                             updateCurrentWeather(data);
@@ -29,7 +29,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+        
     });
+    function addCityButtonListeners() {
+        console.log('addCityButtonListeners called');
+        const cityButtons = document.querySelectorAll('.city-btn');
+        console.log(cityButtons);
+        if (cityButtons.length === 0) {
+            console.error('No city buttons found');
+            return;
+        
+        }
+        cityButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('City Button Clicked:', cityName);
+                const cityName = this.textContent.trim();
+                console.log('City Button Clicked:', cityName);
+
+                cityInput.value = cityName;
+                searchBtn.click();
+            });
+        });
+    }
+    
     
     
 
@@ -135,4 +157,5 @@ function getWeatherForecast(lat, lon) {
         }
             })
         }
+        
     })
